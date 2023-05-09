@@ -6,39 +6,221 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>200</y>
-      <width>113</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>fdgdfg</string>
-    </property>
-   </widget>
-   <widget class="QTimeEdit" name="timeEdit">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>250</y>
-      <width>118</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_inv">
+       <attribute name="title">
+        <string>Инвентаризация</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="inv_tab">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="bc_tab">
+           <attribute name="title">
+            <string>Штрих-код</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="4" column="1">
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="0">
+               <widget class="QGroupBox" name="bc_group">
+                <property name="title">
+                 <string>Данные</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_2">
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item row="5" column="0">
+                  <widget class="QLineEdit" name="SecondName"/>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLineEdit" name="number_workstation_btn"/>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QComboBox" name="department">
+                   <item>
+                    <property name="text">
+                     <string>Офис</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Транспортный отдел</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Администрация</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Складской офис</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Склад</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_4">
+                   <property name="text">
+                    <string>Номер рабочего места</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>Фамилия</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_3">
+                   <property name="text">
+                    <string>Отдел</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="QR">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QPushButton" name="print_btn">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>РАСПЕЧАТАТЬ</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="qr_generator">
+                <property name="text">
+                 <string>СГЕНЕРИРОВАТЬ QR-КОД РАБОЧЕГО МЕСТА</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string>База Данных</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Заявки</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Принтеры</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Отчет</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Главное</string>
+    </property>
+    <addaction name="action"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>О программе</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="action">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Инвентаризация</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
